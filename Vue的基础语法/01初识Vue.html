@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>插值语法:{{name}}</h1>
+      <hr />
+      <a :href="ul">单向数据绑定：点我跳转Vue2.X</a>
+      <!-- 插值语法 v-bind可以简写为: -->
+
+      <h1>数据绑定</h1>
+      单向数据绑定：<input type="text" :value="dataname" />
+      <br />
+      双向数据绑定：<input type="text" v-model="dataname" />
+    </div>
+
+    <script type="text/javascript">
+      Vue.config.productionTip = false; //阻止Vue的生产提升
+      new Vue({
+        el: "#root",
+        data: {
+          name: "谭伟",
+          ul: "https://cn.vuejs.org/",
+          dataname: "谭伟好帅",
+        },
+      });
+    </script>
+  </body>
+</html>
