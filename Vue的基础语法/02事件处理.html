@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <button v-on:click="showInfo">点我啊兄弟</button>
+      <button @click="showInfo2(66)">点我啊兄弟，传参</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+      Vue.config.productionTip = false;
+      new Vue({
+        el: "#root",
+        methods: {
+          showInfo(event) {
+            console.log("event.target: ", event.target.innerText);
+            alert("hello啊 树哥");
+          },
+          showInfo2(number) {
+            console.log(number);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
